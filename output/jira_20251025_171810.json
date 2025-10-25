@@ -1,0 +1,499 @@
+{
+    "tasks": [
+        {
+            "epic_name": "InsightTrack - AI Destekli Görev ve Verimlilik Takip Sistemi",
+            "fields": {
+                "assignee": {
+                    "accountId": "e42",
+                    "name": "Jane Smith"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Sistem mimarisinin belirlenmesi ve işlevsel gereksinimlerin tanımlanması.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2025-11-01",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "sistem mimarisi",
+                    "işlevsel gereksinimler"
+                ],
+                "parent": {
+                    "key": "EPIC-TRACK-1"
+                },
+                "priority": {
+                    "name": "High"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Sistem Mimarisi ve İşlevsel Gereksinimler",
+                "timetracking": {
+                    "originalEstimate": "2d"
+                }
+            }
+        },
+        {
+            "epic_name": "InsightTrack - AI Destekli Görev ve Verimlilik Takip Sistemi",
+            "fields": {
+                "assignee": {
+                    "accountId": "e44",
+                    "name": "Bob Johnson"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Kullanıcı girişinin ve kimlik doğrulama sisteminin tasarlanması.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2025-11-08",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "kullanıcı girişi",
+                    "kimlik doğrulama"
+                ],
+                "parent": {
+                    "key": "EPIC-TRACK-1"
+                },
+                "priority": {
+                    "name": "High"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Kullanıcı Girişi ve Kimlik Doğrulaması",
+                "timetracking": {
+                    "originalEstimate": "3d"
+                }
+            }
+        },
+        {
+            "epic_name": "InsightTrack - AI Destekli Görev ve Verimlilik Takip Sistemi",
+            "fields": {
+                "assignee": {
+                    "accountId": "e42",
+                    "name": "Jane Smith"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Görev ekleme ve analizi işlevlerinin geliştirilmesi.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2025-11-15",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "görev ekleme",
+                    "görev analizi"
+                ],
+                "parent": {
+                    "key": "EPIC-TRACK-1"
+                },
+                "priority": {
+                    "name": "High"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Görev Ekleme ve Analizi",
+                "timetracking": {
+                    "originalEstimate": "4d"
+                }
+            }
+        },
+        {
+            "epic_name": "InsightTrack - AI Destekli Görev ve Verimlilik Takip Sistemi",
+            "fields": {
+                "assignee": {
+                    "accountId": "e42",
+                    "name": "Jane Smith"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Haftalık PDF raporlama işlevinin geliştirilmesi.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2025-11-22",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "raporlama",
+                    "pdf"
+                ],
+                "parent": {
+                    "key": "EPIC-TRACK-1"
+                },
+                "priority": {
+                    "name": "Medium"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Haftalık PDF Raporlama",
+                "timetracking": {
+                    "originalEstimate": "3d"
+                }
+            }
+        },
+        {
+            "epic_name": "InsightTrack - AI Destekli Görev ve Verimlilik Takip Sistemi",
+            "fields": {
+                "assignee": {
+                    "accountId": "e14",
+                    "name": "John Doe"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Görev öncelik önerisi algoritmasının geliştirilmesi.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2025-11-29",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "görev öncelik önerisi",
+                    "algoritma"
+                ],
+                "parent": {
+                    "key": "EPIC-TRACK-1"
+                },
+                "priority": {
+                    "name": "High"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Görev Öncelik Önerisi",
+                "timetracking": {
+                    "originalEstimate": "4d"
+                }
+            }
+        },
+        {
+            "epic_name": "InsightTrack - AI Destekli Görev ve Verimlilik Takip Sistemi",
+            "fields": {
+                "assignee": {
+                    "accountId": "e14",
+                    "name": "John Doe"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Llama 3.2 modelinin sistemle entegrasyonu.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2025-12-06",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "model entegrasyonu",
+                    "llama 3.2"
+                ],
+                "parent": {
+                    "key": "EPIC-TRACK-2"
+                },
+                "priority": {
+                    "name": "High"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Model Entegrasyonu",
+                "timetracking": {
+                    "originalEstimate": "3d"
+                }
+            }
+        },
+        {
+            "epic_name": "InsightTrack - AI Destekli Görev ve Verimlilik Takip Sistemi",
+            "fields": {
+                "assignee": {
+                    "accountId": "e44",
+                    "name": "Bob Johnson"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Kullanıcı, görev ve etkileşim verilerinin saklanacağı veritabanının tasarlanması.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2025-12-13",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "veritabanı",
+                    "tasarım"
+                ],
+                "parent": {
+                    "key": "EPIC-TRACK-2"
+                },
+                "priority": {
+                    "name": "High"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Veritabanı Oluşturma",
+                "timetracking": {
+                    "originalEstimate": "2d"
+                }
+            }
+        },
+        {
+            "epic_name": "Planlama ve Tasarım",
+            "fields": {
+                "assignee": {
+                    "accountId": "e42",
+                    "name": "Jane Smith"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Proje planlama ve tasarımının tamamlanması.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2025-11-14",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "planlama",
+                    "tasarım"
+                ],
+                "parent": {
+                    "key": "PLANLAMA-VE-TASARIM"
+                },
+                "priority": {
+                    "name": "High"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Planlama ve Tasarım",
+                "timetracking": {
+                    "originalEstimate": "2d"
+                }
+            }
+        },
+        {
+            "epic_name": "Backend ve Frontend Geliştirme",
+            "fields": {
+                "assignee": {
+                    "accountId": "e44",
+                    "name": "Bob Johnson"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Backend işlevlerinin geliştirilmesi.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2025-12-05",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "backend",
+                    "geliştirme"
+                ],
+                "parent": {
+                    "key": "BACKEND-VE-FRONTEND-GELISTIRME"
+                },
+                "priority": {
+                    "name": "High"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Backend Geliştirme",
+                "timetracking": {
+                    "originalEstimate": "6d"
+                }
+            }
+        },
+        {
+            "epic_name": "Backend ve Frontend Geliştirme",
+            "fields": {
+                "assignee": {
+                    "accountId": "e42",
+                    "name": "Jane Smith"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Frontend işlevlerinin geliştirilmesi.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2025-12-26",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "frontend",
+                    "geliştirme"
+                ],
+                "parent": {
+                    "key": "BACKEND-VE-FRONTEND-GELISTIRME"
+                },
+                "priority": {
+                    "name": "High"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Frontend Geliştirme",
+                "timetracking": {
+                    "originalEstimate": "6d"
+                }
+            }
+        },
+        {
+            "epic_name": "Test ve Hata Ayıklama",
+            "fields": {
+                "assignee": {
+                    "accountId": "e42",
+                    "name": "Jane Smith"
+                },
+                "description": {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Sistem testlerinin gerçekleştirilmesi ve hata ayıklama.",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "paragraph"
+                        }
+                    ],
+                    "type": "doc",
+                    "version": 1
+                },
+                "duedate": "2026-01-10",
+                "issuetype": {
+                    "name": "Task"
+                },
+                "labels": [
+                    "test",
+                    "hata ayıklama"
+                ],
+                "parent": {
+                    "key": "TEST-VE-HATA-AYIKLAMA"
+                },
+                "priority": {
+                    "name": "High"
+                },
+                "project": {
+                    "key": "INSIGHT"
+                },
+                "summary": "Test ve Hata Ayıklama",
+                "timetracking": {
+                    "originalEstimate": "4d"
+                }
+            }
+        }
+    ]
+}

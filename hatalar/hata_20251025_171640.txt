@@ -1,0 +1,55 @@
+Hata: HTTPSConnectionPool(host='252b70dec01e.ngrok-free.appapi', port=443): Max retries exceeded with url: /generate (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FEB9FF31F0>: Failed to resolve '252b70dec01e.ngrok-free.appapi' ([Errno 11001] getaddrinfo failed)"))
+URL: https://252b70dec01e.ngrok-free.appapi/generate
+Payload: {
+  "json_input": {
+    "project_title": "Ornek Proje İsmi",
+    "index": 1,
+    "estimated_time": "",
+    "metadata": {
+      "description": "Kısa Açıklama",
+      "company": "Şirket",
+      "department": "Departman",
+      "year": 2025,
+      "languages": []
+    },
+    "project_description": "1. Proje Adı\nInsightTrack – AI Destekli Görev ve Verimlilik Takip Sistemi\n2. Proje Özeti\nInsightTrack, bireysel ve kurumsal kullanıcıların üretkenliğini artırmak için geliştirilmiş AI destekli görev ve zaman yönetim sistemidir. Sistem, kullanıcı alışkanlıklarını analiz ederek görev önceliklendirmesi ve verimlilik önerileri sunar. Masaüstü ve web platformlarında çalışır ve Llama 3.2 modeli ile görev sınıflandırma, özetleme ve raporlama yapar.\n3. Amaç ve Hedefler\n• Amaç: Zaman yönetimini optimize ederek görev tamamlama oranlarını artırmak.\n• Hedefler:\n o Görevlerin AI ile kategorize edilmesi\n o Tamamlama süresinin %25 azaltılması\n o Haftalık otomatik verimlilik raporları\n o 3 ay içinde MVP sürümü\n4. Proje Kapsamı\n• Dahil: Web/masaüstü istemci (React + Electron), AI görev sınıflandırma, RESTful API, PostgreSQL, raporlama ekranı\n• Dış: Mobil uygulama, kurumsal lisans, takvim entegrasyonu\n5. Sistem Mimarisi\nKullanıcı → API → AI Modülü → Veritabanı → Raporlama\n• Frontend: Görev ekleme, öneriler\n• Backend: CRUD, kimlik doğrulama\n• AI Modülü: Görev sınıflandırma ve özetleme\n• Veritabanı: Kullanıcı, görev, etkileşim\n• Raporlama: Haftalık PDF\n6. İşlevsel Gereksinimler\n• Kullanıcı girişi (JWT)\n• Görev ekleme ve analizi\n• Haftalık PDF rapor\n• Görev öncelik önerisi\n7. Zaman Çizelgesi\n• Planlama & Tasarım: 2 hafta (1–14 Kasım 2025)\n• Backend: 3 hafta (15 Kasım–5 Aralık)\n• Frontend: 3 hafta (6–26 Aralık)\n• Model Entegrasyonu: 2 hafta (27 Aralık–10 Ocak)",
+    "possible_solution": "Opsiyonel ",
+    "team": [
+      {
+        "employee_id": "e42",
+        "name": "Jane Smith",
+        "skills": [
+          "web",
+          "react",
+          "restapi"
+        ],
+        "department": "Frontend"
+      },
+      {
+        "employee_id": "e44",
+        "name": "Bob Johnson",
+        "skills": [
+          "python",
+          "react",
+          "docker"
+        ],
+        "department": "Full Stack"
+      },
+      {
+        "employee_id": "e14",
+        "name": "John Doe",
+        "skills": [
+          "python",
+          "LLM",
+          "NLP"
+        ],
+        "department": "AI"
+      }
+    ],
+    "tasks": []
+  },
+  "project_key": "INSIGHT",
+  "use_model": true
+}
+
+Response:
