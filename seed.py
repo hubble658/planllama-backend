@@ -4,9 +4,7 @@ from models import Employee, Project, Task
 
 def seed_database():
     """Seed the database with initial data matching the frontend mock data"""
-    
     print("Seeding database...")
-    
     # Clear existing data
     db.session.query(Task).delete()
     db.session.query(Project).delete()
