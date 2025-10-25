@@ -8,6 +8,7 @@ import random # Simülasyon için eklendi
 # Yeni import'lar
 import random 
 import requests 
+import json
 import re 
 projects_bp = Blueprint('projects', __name__, url_prefix='/api/projects')
 
@@ -19,6 +20,12 @@ def generate_tasks_and_create_project():
     Kullanıcıdan gelen proje detaylarını alır,
     LLM API’ye gönderir, gelen görevleri veritabanına işler.
     """
+    # Gerekli import'ların yapıldığını varsayıyoruz:
+    # from flask import request, jsonify, current_app
+    # import random, requests, json
+    # from datetime import date, timedelta, datetime
+    # from your_models import Project, Task, Employee, db
+
     data = request.get_json()
 
     required_fields = ['project_title', 'metadata', 'team']
@@ -48,6 +55,13 @@ def generate_tasks_and_create_project():
         response = requests.post(AI_API_URL, json=payload, timeout=120)
         response.raise_for_status()
         result = response.json()
+        
+        # --- LOGLAMA NOKTASI 1: LLM API'den Gelen Ham Cevap ---
+        # Eğer flask uygulamanız varsa current_app.logger kullanın, yoksa print() veya logging modülü kullanın.
+        print("--- LLM API Ham Cevabı ---")
+        print(json.dumps(result, indent=2))
+        print("--------------------------")
+
 
         if not result.get("success", True):
             return jsonify({'error': 'Model processing failed', 'details': result}), 500
@@ -77,11 +91,19 @@ def generate_tasks_and_create_project():
     # --- Görevleri veritabanına kaydet ---
     created_tasks = []
 
-    for t in tasks_from_llm:
+    for i, t in enumerate(tasks_from_llm):
         f = t["fields"]
 
         # Assignee bilgisi
+        # Atanan kişi ID'sini çekmeye çalışırken kullanılan yol: f.get("assignee", {}).get("accountId")
         assignee_id = f.get("assignee", {}).get("accountId")
+        
+        # --- LOGLAMA NOKTASI 2: Her Görev İçin Atanan Kişi Verisi ---
+        print(f"Task {i+1} Başlık: {f.get('summary')}")
+        print(f"Task {i+1} 'assignee' alanı (tam): {f.get('assignee')}")
+        print(f"Task {i+1} Çıkarılan assignee_id: {assignee_id}")
+        print("--------------------------")
+
 
         # Estimated time (örnek: "4d" → saat cinsinden)
         estimate_str = f.get("timetracking", {}).get("originalEstimate", "0d")
@@ -100,11 +122,13 @@ def generate_tasks_and_create_project():
         task = Task(
             task_id=task_id,
             title=f.get("summary"),
+            # Description çekme mantığı karmaşık görünüyor, hata vermediği varsayılmıştır.
             description=f.get("description", {}).get("content", [{}])[0].get("content", [{}])[0].get("text", ""),
             estimated_hours=estimated_hours,
             priority=f.get("priority", {}).get("name", "Medium").lower(),
             status="Pending",
-            assignee_id=assignee_id,
+            # assignee_id, yukarıda LLM verisinden çekilen değerdir
+            assignee_id=assignee_id, 
             project_id=project_id,
             due_date=datetime.strptime(f.get("duedate"), "%Y-%m-%d") if f.get("duedate") else None,
             created_at=datetime.utcnow()
@@ -118,6 +142,10 @@ def generate_tasks_and_create_project():
             emp = Employee.query.get(assignee_id)
             if emp:
                 emp.current_load_hours = (emp.current_load_hours or 0) + task.estimated_hours
+            else:
+                # --- EK LOGLAMA: Atanan ID Veritabanında Bulunamadı ---
+                print(f"UYARI: {assignee_id} ID'li çalışan veritabanında bulunamadı!")
+                print("--------------------------")
 
     db.session.commit()
 
@@ -127,7 +155,7 @@ def generate_tasks_and_create_project():
         "project": project.to_dict(),
         "generated_tasks": created_tasks
     }), 201
-
+    
 # --- Mevcut Proje CRUD ve Listeleme Fonksiyonları ---
 
 @projects_bp.route('', methods=['GET'])
