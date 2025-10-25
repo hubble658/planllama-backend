@@ -10,6 +10,7 @@ import random
 import requests 
 import json
 import re 
+import os
 projects_bp = Blueprint('projects', __name__, url_prefix='/api/projects')
 
 
@@ -42,8 +43,9 @@ def generate_tasks_and_create_project():
         return jsonify({'error': 'Project name already exists.'}), 400
 
     # Ngrok URL veya sabit backend adresi
-    AI_API_URL = "https://252b70dec01e.ngrok-free.app/api/generate"
-
+    AI_API_URL = os.getenv("AI_API_URL")
+    AI_API_URL = AI_API_URL+"/api/generate"
+    
     payload = {
         "json_input": data,
         "project_key": data.get("project_key", "INSIGHT"),
